@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Yehia | Cybersecurity Manager Portfolio & CV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class', // Enable class-based dark mode
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#3b82f6', 
+                        'secondary': '#10b981', 
+                        'bg-main': 'var(--color-bg-main)',
+                        'text-main': 'var(--color-text-main)',
+                        'card-bg': 'var(--color-card-bg)',
+                    },
+                    transitionProperty: {
+                        'colors': 'color, background-color, border-color, text-decoration-color, fill, stroke',
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="./src/style.css"> 
+    <style>
+        /* Base variables for Light/Dark Mode */
+        :root {
+            --color-primary: #3b82f6; 
+            --color-secondary: #10b981; 
+            --color-bg-main: #f9fafb; 
+            --color-text-main: #1f2937; 
+            --color-card-bg: #ffffff;
+        }
+        .dark {
+            --color-bg-main: #111827; 
+            --color-text-main: #f9fafb; 
+            --color-card-bg: #1f2937; 
+        }
+        
+        /* Custom scrollbar for aesthetic */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--color-primary);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--color-bg-main);
+        }
+
+        /* Ensuring smooth background and text color transitions */
+        body {
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+        .skill-progress-bar {
+            width: 0; 
+            transition: width 1.5s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-bg-main text-text-main font-sans transition-colors duration-500">
+
+    <header class="sticky top-0 z-50 bg-card-bg shadow-md backdrop-blur-sm bg-opacity-90 transition-colors duration-500">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#home" class="text-xl font-bold text-primary hover:text-secondary transition-colors">Ahmed Yehia</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#skills" class="text-text-main hover:text-primary transition-colors">Skills</a>
+                <a href="#projects" class="text-text-main hover:text-primary transition-colors">Projects</a>
+                <a href="#experience" class="text-text-main hover:text-primary transition-colors">Experience</a>
+                <a href="#contact" class="text-text-main hover:text-primary transition-colors">Contact</a>
+            </div>
+            <button id="theme-toggle" class="p-2 rounded-full bg-bg-main hover:bg-primary/10 transition-colors">
+                <svg id="sun-icon" class="w-6 h-6 text-yellow-500 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                <svg id="moon-icon" class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+            </button>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <section id="home" class="min-h-screen flex items-center pt-24 pb-12">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h1 class="text-5xl sm:text-7xl font-extrabold leading-tight">
+                        Hi, I'm <span class="text-primary hover:text-secondary transition-colors">Ahmed Yehia</span>.
+                    </h1>
+                    <p class="text-2xl sm:text-3xl font-light text-text-main/80">
+                        I am a <span id="typing-text" class="font-medium text-secondary"></span><span class="typing-cursor">|</span>
+                    </p>
+                    <p class="text-lg mt-4 max-w-lg">
+                        Certified **Cybersecurity Manager** with 18+ years of expertise in security architecture, governance, and risk management. [cite_start]I lead excellence in digital resilience[cite: 10].
+                    </p>
+                    <div class="flex space-x-4 pt-4">
+                        <a href="#contact" class="px-6 py-3 bg-primary text-white font-semibold rounded-lg shadow-lg hover:bg-primary/90 transition-all transform hover:scale-[1.02] duration-300">Get In Touch</a>
+                        <a href="assets/Ahmed_Yehia_CV.pdf" download class="px-6 py-3 border border-text-main/20 text-text-main font-semibold rounded-lg shadow-sm hover:bg-card-bg/50 transition-all transform hover:translate-y-[-2px] duration-300">Download CV</a>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center">
+                    <div id="image-placeholder" class="w-64 h-64 md:w-80 md:h-80 bg-primary/20 rounded-full shadow-2xl overflow-hidden border-4 border-primary/50 transition-all hover:scale-[1.05]">
+                        <img src="assets/face_2.jpg" alt="Ahmed Yehia" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-t-2 border-primary/10 my-12" />
+
+        <section id="skills" class="py-16 opacity-0 translate-y-10 transition-all duration-1000 ease-out" data-animate-on-scroll>
+            <h2 class="text-4xl font-bold mb-10 text-center text-primary">Key Skills & Expertise 🛠️</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-6 bg-card-bg rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500">
+                    <h3 class="text-2xl font-semibold mb-6 border-b pb-2 text-secondary">Architecture & Governance</h3>
+                    <div class="mb-4" data-skill-level="90">
+                        <div class="flex justify-between mb-1">
+                            <span class="font-medium">Security Baselines (ISO 27001, NIST, GDPR)</span>
+                            <span class="text-sm">90%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                            <div class="skill-progress-bar h-2.5 rounded-full bg-primary" style="width: 0;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4" data-skill-level="85">
+                        <div class="flex justify-between mb-1">
+                            <span class="font-medium">GRC (Risk Register, Incident Response)</span>
+                            <span class="text-sm">85%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                            <div class="skill-progress-bar h-2.5 rounded-full bg-primary" style="width: 0;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4" data-skill-level="80">
+                        <div class="flex justify-between mb-1">
+                            <span class="font-medium">Security Architecture Review (HLD, LLD, CM)</span>
+                            <span class="text-sm">80%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                            <div class="skill-progress-bar h-2.5 rounded-full bg-primary" style="width: 0;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 bg-card-bg rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500">
+                    <h3 class="text-2xl font-semibold mb-6 border-b pb-2 text-secondary">Vulnerability & Pentesting</h3>
+                    <div class="mb-4" data-skill-level="90">
+                        <div class="flex justify-between mb-1">
+                            <span class="font-medium">Vulnerability Assessment (Nessus, Acunetix, etc.)</span>
+                            <span class="text-sm">90%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                            <div class="skill-progress-bar h-2.5 rounded-full bg-primary" style="width: 0;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4" data-skill-level="85">
+                        <div class="flex justify-between mb-1">
+                            <span class="font-medium">Web & Network Penetration Testing</span>
+                            <span class="text-sm">85%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                            <div class="skill-progress-bar h-2.5 rounded-full bg-primary" style="width: 0;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4" data-skill-level="70">
+                        <div class="flex justify-between mb-1">
+                            <span class="font-medium">CPE Firmware Analysis & Hardware Pentest</span>
+                            <span class="text-sm">70%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                            <div class="skill-progress-bar h-2.5 rounded-full bg-primary" style="width: 0;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 bg-card-bg rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500">
+                    <h3 class="text-2xl font-semibold mb-6 border-b pb-2 text-secondary">Leadership & Soft Skills</h3>
+                    <ul class="space-y-3 list-disc list-inside">
+                        [cite_start]<li class="hover:text-primary transition-colors">Managed Cybersecurity Architecture Review and Assurance Unit (12 professionals) [cite: 69]</li>
+                        [cite_start]<li class="hover:text-primary transition-colors">Certified Professional Trainer (TTT) and Mentor [cite: 14, 56]</li>
+                        [cite_start]<li class="hover:text-primary transition-colors">Excellent presentation skills [cite: 150]</li>
+                        [cite_start]<li class="hover:text-primary transition-colors">Executive-Level Architecture Review and Risk Reporting [cite: 17]</li>
+                        [cite_start]<li class="hover:text-primary transition-colors">Excellent Command of both Written and Spoken English [cite: 147]</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-t-2 border-primary/10 my-12" />
+
+        <section id="projects" class="py-16 opacity-0 translate-y-10 transition-all duration-1000 ease-out" data-animate-on-scroll>
+            <h2 class="text-4xl font-bold mb-10 text-center text-primary">Key Initiatives & Projects 🛡️</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <a href="#" class="block group transform hover:scale-[1.02] transition-all duration-500 ease-out">
+                    <div class="bg-card-bg rounded-xl shadow-xl overflow-hidden p-6 h-full flex flex-col justify-between border-b-4 border-primary/0 group-hover:border-primary transition-colors">
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-2 group-hover:text-primary transition-colors">Cybersecurity Automation Flow</h3>
+                            [cite_start]<p class="text-text-main/70 mb-4">Leading the automation transaction for automating the cyber security General department work flow[cite: 83].</p>
+                        </div>
+                        <div class="mt-4">
+                            <div class="flex flex-wrap gap-2 text-sm font-medium">
+                                <span class="px-3 py-1 bg-secondary/20 text-secondary rounded-full">Process Automation</span>
+                                <span class="px-3 py-1 bg-primary/20 text-primary rounded-full">Continuous Improvement</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="#" class="block group transform hover:scale-[1.02] transition-all duration-500 ease-out">
+                    <div class="bg-card-bg rounded-xl shadow-xl overflow-hidden p-6 h-full flex flex-col justify-between border-b-4 border-primary/0 group-hover:border-primary transition-colors">
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-2 group-hover:text-primary transition-colors">Security Development Framework</h3>
+                            [cite_start]<p class="text-text-main/70 mb-4">Participation in developing security standards for infrastructure, application, mobile, api, etc.[cite: 81].</p>
+                        </div>
+                        <div class="mt-4">
+                            <div class="flex flex-wrap gap-2 text-sm font-medium">
+                                <span class="px-3 py-1 bg-yellow-600/20 text-yellow-600 rounded-full">DevSecOps</span>
+                                <span class="px-3 py-1 bg-green-600/20 text-green-600 rounded-full">Security Standards</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="block group transform hover:scale-[1.02] transition-all duration-500 ease-out">
+                    <div class="bg-card-bg rounded-xl shadow-xl overflow-hidden p-6 h-full flex flex-col justify-between border-b-4 border-primary/0 group-hover:border-primary transition-colors">
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-2 group-hover:text-primary transition-colors">Team Development & Mentorship</h3>
+                            [cite_start]<p class="text-text-main/70 mb-4">Designed and implemented a comprehensive Training and Development Framework for cybersecurity architects[cite: 71].</p>
+                        </div>
+                        <div class="mt-4">
+                            <div class="flex flex-wrap gap-2 text-sm font-medium">
+                                <span class="px-3 py-1 bg-red-600/20 text-red-600 rounded-full">Leadership</span>
+                                <span class="px-3 py-1 bg-blue-600/20 text-blue-600 rounded-full">Education</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <hr class="border-t-2 border-primary/10 my-12" />
+
+        <section id="experience" class="py-16 opacity-0 translate-y-10 transition-all duration-1000 ease-out" data-animate-on-scroll>
+            <h2 class="text-4xl font-bold mb-10 text-center text-primary">Professional Journey Timeline 📜</h2>
+            <div class="relative max-w-4xl mx-auto">
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-primary/20 h-full"></div>
+                
+                <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                    <div class="w-full md:w-5/12">
+                        <div class="bg-card-bg p-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 timeline-card opacity-0 translate-y-8">
+                            <h3 class="text-xl font-bold text-primary">IT Unit Manager for Security Design and Assurance</h3>
+                            <p class="text-sm text-text-main/70">WE (Telecom Egypt) | [cite_start]Jul 2014 - Present [cite: 64, 67]</p>
+                            [cite_start]<p class="mt-3 text-sm">Managing a team of 12 cybersecurity architects [cite: 69][cite_start], overseeing CAPEX/OPEX budgets [cite: 71][cite_start], driving security design assurance (HLD/LLD/CM) [cite: 80][cite_start], and leading training frameworks[cite: 71].</p>
+                        </div>
+                    </div>
+                    <div class="z-10 flex items-center order-1 w-8 h-8 rounded-full bg-primary shadow-lg ring-4 ring-primary/20"></div>
+                    <div class="w-full md:w-5/12"></div>
+                </div>
+
+                <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                    <div class="w-full md:w-5/12">
+                        <div class="bg-card-bg p-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 timeline-card opacity-0 translate-y-8">
+                            <h3 class="text-xl font-bold text-primary">IT Section Head (Policy and Compliance - GRC)</h3>
+                            <p class="text-sm text-text-main/70">WE (Telecom Egypt) | [cite_start]Jun 2013 - Jul 2014 [cite: 96, 99, 100]</p>
+                            [cite_start]<p class="mt-3 text-sm">Contributed to developing security policies aligned with NIST, CIS, and SCF frameworks [cite: 101] [cite_start]and conducted risk assessments and compliance audits[cite: 102].</p>
+                        </div>
+                    </div>
+                    <div class="z-10 flex items-center order-1 w-8 h-8 rounded-full bg-primary shadow-lg ring-4 ring-primary/20"></div>
+                    <div class="w-full md:w-5/12"></div>
+                </div>
+
+                <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                    <div class="w-full md:w-5/12">
+                        <div class="bg-card-bg p-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 timeline-card opacity-0 translate-y-8">
+                            <h3 class="text-xl font-bold text-primary">IT Supervisor (Pentest - GRC)</h3>
+                            <p class="text-sm text-text-main/70">WE (Telecom Egypt) | [cite_start]May 2011 - Jun 2013 [cite: 104, 105]</p>
+                            [cite_start]<p class="mt-3 text-sm">Responsible for Network and Web Vulnerability and Penetration Testing [cite: 108][cite_start], report preparation, and collaborating with SOC/IR teams[cite: 110].</p>
+                        </div>
+                    </div>
+                    <div class="z-10 flex items-center order-1 w-8 h-8 rounded-full bg-primary shadow-lg ring-4 ring-primary/20"></div>
+                    <div class="w-full md:w-5/12"></div>
+                </div>
+                
+                <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                    <div class="w-full md:w-5/12">
+                        <div class="bg-card-bg p-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 timeline-card opacity-0 translate-y-8">
+                            <h3 class="text-xl font-bold text-primary">IT Senior (Risk and Awareness - GRC)</h3>
+                            <p class="text-sm text-text-main/70">WE (Telecom Egypt) | [cite_start]Apr 2009 - May 2011 [cite: 112, 113, 114]</p>
+                            [cite_start]<p class="mt-3 text-sm">Managed and continuously updated the Cybersecurity Risk Register [cite: 116] [cite_start]and led risk assessments for new technologies and third-party integrations[cite: 117].</p>
+                        </div>
+                    </div>
+                    <div class="z-10 flex items-center order-1 w-8 h-8 rounded-full bg-primary shadow-lg ring-4 ring-primary/20"></div>
+                    <div class="w-full md:w-5/12"></div>
+                </div>
+
+                <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                    <div class="w-full md:w-5/12">
+                        <div class="bg-card-bg p-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 timeline-card opacity-0 translate-y-8">
+                            <h3 class="text-xl font-bold text-primary">Bachelor of Computer Science</h3>
+                            <p class="text-sm text-text-main/70">Advanced Academy in El-Haram | [cite_start]2000-2004 [cite: 24, 25, 26]</p>
+                            [cite_start]<p class="mt-3 text-sm">Completed Bachelor's degree with a grade of **Good (73.53%)**[cite: 27].</p>
+                        </div>
+                    </div>
+                    <div class="z-10 flex items-center order-1 w-8 h-8 rounded-full bg-primary shadow-lg ring-4 ring-primary/20"></div>
+                    <div class="w-full md:w-5/12"></div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-t-2 border-primary/10 my-12" />
+
+        <section id="contact" class="py-16 opacity-0 translate-y-10 transition-all duration-1000 ease-out" data-animate-on-scroll>
+            <h2 class="text-4xl font-bold mb-10 text-center text-primary">Get In Touch 📧</h2>
+            <div class="max-w-lg mx-auto bg-card-bg p-8 rounded-xl shadow-2xl">
+                <form id="contact-form" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium mb-1">Name</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition-colors bg-bg-main text-text-main">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium mb-1">Email</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition-colors bg-bg-main text-text-main">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium mb-1">Message</label>
+                        <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition-colors bg-bg-main text-text-main"></textarea>
+                    </div>
+                    <button type="submit" class="w-full px-6 py-3 bg-secondary text-white font-semibold rounded-lg shadow-lg hover:bg-secondary/90 transition-all transform hover:scale-[1.01] duration-300">
+                        Send Message
+                    </button>
+                    <p id="form-message" class="text-center mt-4 text-sm font-medium hidden"></p>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-6 border-t border-primary/10 mt-12 text-sm text-text-main/70">
+        <p>&copy; 2025 Ahmed Yehia. All rights reserved. | Built with ❤️ and Code.</p>
+        <div class="flex justify-center space-x-4 mt-2">
+            [cite_start]<a href="https://www.linkedin.com/in/ahmed-hamed-6813b1289" target="_blank" class="hover:text-primary transition-colors">LinkedIn</a> [cite: 3]
+            [cite_start]<a href="mailto:Ahmed.hamed@te.eg" class="hover:text-primary transition-colors">Email</a> [cite: 6]
+        </div>
+    </footer>
+
+    <script src="./src/script.js"></script>
+</body>
+</html>
